@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e4bbdc, #603251);
+    padding: 10px;
+}
+
+.to-do-List{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.to-do-List h1 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.to-do-List h1 img {
+    width: 36px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 21px 42px;
+    background: #a218ac;
+    color: #f7f4f4;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 21px;
+    padding: 22px 8px 14px 51px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex; 
+    justify-content: space-between; 
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(untick.png);
+    background-size: cover;
+    background-position: center;
+    top: 22px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #1c1c1c;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(tick.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #595454;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+ul li span:hover {
+    background: #949494;
+}
+
+ul li .delete-button {
+    background: #a218ac;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 23px 10px 23px;
+    cursor: pointer;
+    border-radius: 40px;
+}
